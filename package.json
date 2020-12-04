@@ -10,6 +10,10 @@
   },
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build --no-content-hash src/index.html"
+  },
+  "volta": {
+    "node": "14.15.1",
+    "yarn": "1.22.10"
   }
 }
