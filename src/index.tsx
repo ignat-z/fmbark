@@ -34,9 +34,13 @@ class Clock {
   }
 
   draw() {
-    this.hoursDiv.innerHTML = (this.date.getHours() % 12 || 12).toString();
-    this.minutesDiv.innerHTML = this.date.getMinutes().toString();
+    this.hoursDiv.innerHTML = this.leftPad((this.date.getHours() % 12 || 12).toString(), '0');
+    this.minutesDiv.innerHTML = this.leftPad(this.date.getMinutes().toString(), '0');
     this.meridiemDiv.innerHTML = this.date.getHours() >= 12 ? 'PM' : 'AM';
+  }
+
+  leftPad(value: string, pad: string) {
+    return (value.length) == 1 ? (pad.concat(value)) : value;
   }
 }
 
