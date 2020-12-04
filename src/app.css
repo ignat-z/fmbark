@@ -1,0 +1,54 @@
+body,html,.bg{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.bg{
+  background-size: cover;
+  background-position: center center;
+  opacity: 0;
+  z-index: 1;
+}
+
+.time{
+  display: inline-block;
+  margin: 0 auto;
+  color: #FFF;
+  vertical-align: 50%;
+  text-align: center;
+  border: 1vw solid #FFF;
+  line-height: 12vw;
+  height: 12vw;
+  padding: 0 2vw;
+  position: absolute;
+  font-family: "Roboto";
+  top: 50%;
+  left: 50%;
+  margin: -6vw 0 0 0;
+  user-select: none;
+  cursor: default;
+  z-index: 2;
+  font-weight: 600;
+  transform: translateX(-50%);
+}
+
+.time span{
+  font-size: 9vw;
+}
+
+.time .seperator {
+  opacity: 0.99999;
+  -webkit-transition: opacity 0.2s;
+  display: inline-block;
+  transform: translateY(-1vw);
+}
+
+.meridiem {
+  display: none;
+  padding-left: 2vw;
+}
+
+.loaded {
+  opacity: 1;
+}
